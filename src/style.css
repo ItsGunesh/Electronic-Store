@@ -845,3 +845,141 @@ footer {
     font-weight: bold;
   }
 }
+
+#productCartContainer {
+  display: flex;
+  flex-direction: column;
+
+  & .cards {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-shadow: 0 0;
+    border-top: 0.1rem solid #d8d8d8;
+    border-right: 0.1rem solid #d8d8d8;
+    border-left: 0.1rem solid #d8d8d8;
+    border-radius: 0;
+    &:last-child {
+      border-bottom: 0.1rem solid #d8d8d8;
+    }
+  }
+
+  & .card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr 0.5fr 1fr 1fr;
+    align-items: center; /* margin: auto; */
+    gap: 3.2rem;
+  }
+
+  & .productImage {
+    width: 16rem;
+  }
+
+  & .productName {
+    font-size: 2rem;
+  }
+
+  & .productPrice {
+    font-size: 1.6rem;
+  }
+
+  & .productActualPrice {
+    font-size: 1.6rem;
+  }
+}
+
+.category {
+  background-color: #e7d6d6;
+  padding: 0.3rem 1.2rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+}
+
+.productRating {
+  color: #e9db16;
+}
+
+.productPrice,
+.productActualPrice {
+  font-size: 2.2rem;
+}
+
+.productActualPrice {
+  text-decoration: line-through;
+}
+
+.productCartTotalElem {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin-top: 3.2rem;
+}
+
+.productCartTotalElement {
+  padding: 2.4rem;
+  background-color: var(--backgroundSecondary);
+  height: auto;
+  width: 32rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.productOrderTotal {
+  /* background-color: rgb(60, 60, 60); */
+  max-width: 30rem;
+
+  & div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.2rem;
+
+    p {
+      color: #8c9299;
+    }
+
+    .productSubTotal,
+    .productFinalTotal,
+    .productTax {
+      color: var(--textColor);
+      font-weight: bold;
+    }
+  }
+}
+
+@media (width <= 1380px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .section-hero img {
+    width: 90%;
+  }
+}
+
+@media (width <= 1220px) {
+  html {
+    font-size: 54%;
+  }
+
+  :is(
+      .section-about,
+      .section-blog,
+      .section-course,
+      .section-contact--homepage,
+      .section-why--choose
+    )
+    .grid {
+    gap: 6.4rem;
+  }
+
+  .choose-center-div figure::after {
+    width: 46rem;
+    height: 46rem;
+  }
+}
+
