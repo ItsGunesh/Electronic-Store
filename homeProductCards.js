@@ -34,11 +34,11 @@ export const showProductContainer = (products) => {
         homeQuantityToggle(event, id, stock);
       });
 
-    // productClone
-    //   .querySelector(".add-to-cart-button")
-    //   .addEventListener("click", (event) => {
-    //     addToCart(event, id, stock);
-    //   });
+    productClone
+      .querySelector(".add-to-cart-button")
+      .addEventListener("click", (event) => {
+        addToCart(event, id, stock);
+      });
 
     productContainer.append(productClone);
   });
